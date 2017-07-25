@@ -21,24 +21,22 @@ const newVideo = (videoName, id = "video") => {
 }
 
 const playVideo = (video) => {
-    video.texture.baseTexture.source.play()
-    // hax
     SceneManager._scene._spriteset.addVideo(video)
+    video.texture.baseTexture.source.play()
 }
 
 const playVideoById = (id) => {
-    const video = getVideo(id)
+    let video = getVideoById(id)
     playVideo(video)
 }
 
 const stopVideo = (video) => {
-    video.texture.baseTexture.source.pause()
-    // hax
     SceneManager._scene._spriteset.removeVideo(video)
+    video.texture.baseTexture.source.pause()
 }
 
 const stopVideoById = (id) => {
-    const video = getVideo(id)
+    const video = getVideoById(id)
     stopVideo(video)
     delete videoMap[id]
 }
@@ -48,7 +46,7 @@ const setLoop = (video) => {
 }
 
 const setLoopById = (id) => {
-    const video = getVideo(id)
+    const video = getVideoById(id)
     setLoop(video)
 }
 
@@ -60,12 +58,18 @@ const getVideoById = (id) => {
     return videoMap[id]
 }
 
+const isReady = () => {
+    return !Object.values(videoCache).some((video) => !video.baseTexture.hasLoaded)
+}
+
 export default {
     newVideo,
     loadVideo,
+    playVideo,
     playVideoById,
     stopVideoById,
     setLoopById,
     releaseVideo,
     getVideoById,
+    isReady,
 }

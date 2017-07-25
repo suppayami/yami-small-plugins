@@ -11,7 +11,10 @@
  *   ysp.VideoPlayer.stopVideoById(id) - Stop a Video object by id
  *   ysp.VideoPlayer.setLoopById(id) - Make a Video object playing loop by id
  *   ysp.VideoPlayer.getVideoById(id) - Get Video object by id
+ *   ysp.VideoPlayer.isReady() - Check if all videos have been loaded
  *
  * Video Object is a PIXI.Sprite object, can be re-position by modifying x and y props
+ * To preload a (or many) video(s), use loadVideo(videoName) followed by a loop in
+ * an event, break the loop when isReady() returns true
  */
 
