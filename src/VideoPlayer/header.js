@@ -1,5 +1,5 @@
 /*:
- * @plugindesc Plugin used for playing video.
+ * @plugindesc v1.0.0 Plugin used for playing video.
  * @author Dr.Yami
  *
  * @help

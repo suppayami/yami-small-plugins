@@ -5,7 +5,7 @@ const webpack = require('webpack')
 config.devtool = 'source-map'
 config.output = {
     path: path.join(__dirname, "dist/"),
-    filename: "YED_[name].js"
+    filename: "YSP_[name].js"
 }
 
 config.plugins = [
