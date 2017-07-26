@@ -14,6 +14,11 @@
 var ysp = ysp || {};
 ysp.Preloader = {};
 
+ysp.Preloader.Config = {
+    // release memory MAP_BASED assets on changing map
+    releaseMapChange: true
+};
+
 // GLOBAL Preload, will be preloaded when start the game
 ysp.Preloader.GLOBAL = {
     IMAGES: [

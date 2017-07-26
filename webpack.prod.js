@@ -10,7 +10,8 @@ config.output = {
 
 config.plugins = [
     new webpack.optimize.UglifyJsPlugin({
-        compress: { warnings: false }
+        compress: { warnings: false },
+        sourceMap: true
     })
 ].concat(config.plugins)
 
