@@ -16,10 +16,14 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "clean-webpack-plugin": "^0.1.16",
+    "pixi.js": "^4.5.4",
+    "ts-loader": "^2.3.3",
+    "typescript": "^2.4.2",
     "webpack": "^3.3.0",
     "webpack-sources": "^1.0.1"
   },
   "dependencies": {
+    "@types/pixi.js": "^4.5.3",
     "immutable": "^3.8.1"
   }
 }

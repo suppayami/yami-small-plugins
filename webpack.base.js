@@ -4,6 +4,9 @@ const Entry = require('./entry.config')
 
 module.exports = {
     entry: Entry,
+    externals: {
+        'pixi.js': 'pixi.js'
+    },
     module: {
         rules: [
             {
@@ -12,11 +15,21 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.ts?$/,
+                exclude: /(node_modules|bower_components|demo\/)/,
+                use: {
+                    loader: 'ts-loader'
+                }
             }
         ]
     },
     plugins: [
-        new IncludeHeaderPlugin()
+        new IncludeHeaderPlugin(),
+        new webpack.ProvidePlugin({
+            'pixi.js': 'pixi.js'
+        })
     ],
     target: 'web'
 };
