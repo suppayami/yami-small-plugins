@@ -6,9 +6,6 @@
  * @help
  * Simply integrate Spine into RMMV. The spine assets have to be
  * loaded before create new Spine.
- *
- * Requires `https://github.com/pixijs/pixi-spine`
- * Just get the `bin` js and put it into `index.html`
  */
 
 var ysp = ysp || {};

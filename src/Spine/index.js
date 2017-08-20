@@ -1,3 +1,5 @@
+import './pixi-spine'
+
 import spine from './spine'
 import loader from './loader'
 import sceneBase from './scene-base'
