@@ -1,4 +1,5 @@
 import VideoPlayer from './video-player'
+import Helpers from './helpers'
 
 const releaseMapAssets = (mapId) => {
     if (!ysp.Preloader.Config.releaseMapChange) {
@@ -28,8 +29,8 @@ const preloadMapAssets = (mapId) => {
     }
 
     for (let image of assets.IMAGES) {
-        let path = `img/${encodeURIComponent(image)}.png`
-        ImageManager.reserveNormalBitmap(`img/${path}.png`, 0, ImageManager._defaultReservationId)
+        let path = `img/${Helpers.encodeURIImageName(image)}.png`
+        ImageManager.reserveNormalBitmap(`${path}`, 0, ImageManager._defaultReservationId)
     }
 
     for (let movie of assets.VIDEOS) {
