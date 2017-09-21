@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es6"
+    },
+    "exclude": [
+        "demo/**/*",
+        "dist/**/*",
+        "node_modules/**/*.js",
+        "webpack/**/*"
+    ],
+    "include": [
+        "src/**/*",
+        "node_modules/@types/**/*.ts",
+        "./rmmv.d.ts"
+    ]
+}

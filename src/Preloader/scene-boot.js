@@ -2,7 +2,8 @@ import VideoPlayer from './video-player'
 
 const preloadGlobalAssets = () => {
     for (let image of ysp.Preloader.GLOBAL.IMAGES) {
-        ImageManager.reserveNormalBitmap(`img/${image}.png`, 0, ImageManager._defaultReservationId)
+        let path = `img/${encodeURIComponent(image)}.png`
+        ImageManager.reserveNormalBitmap(`path`, 0, ImageManager._defaultReservationId)
     }
 
     for (let movie of ysp.Preloader.GLOBAL.VIDEOS) {

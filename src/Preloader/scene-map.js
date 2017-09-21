@@ -28,7 +28,8 @@ const preloadMapAssets = (mapId) => {
     }
 
     for (let image of assets.IMAGES) {
-        ImageManager.reserveNormalBitmap(`img/${image}.png`, 0, ImageManager._defaultReservationId)
+        let path = `img/${encodeURIComponent(image)}.png`
+        ImageManager.reserveNormalBitmap(`img/${path}.png`, 0, ImageManager._defaultReservationId)
     }
 
     for (let movie of assets.VIDEOS) {
