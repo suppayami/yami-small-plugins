@@ -5,7 +5,11 @@ const loadVideo = (videoName) => {
     if (videoCache[videoName]) {
         return videoCache[videoName]
     }
-    let texture = PIXI.Texture.fromVideo(`movies/${videoName}`)
+    let video = document.createElement('video')
+    video.crossOrigin = 'anonymous'
+    video.preload = ''
+    video.src=`movies/${videoName}`
+    let texture = PIXI.Texture.fromVideo(video)
     texture.baseTexture.autoPlay = false
     videoCache[videoName] = texture
     return texture
