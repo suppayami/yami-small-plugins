@@ -22,6 +22,7 @@ const newVideo = (videoName, id = "video") => {
 
 const playVideo = (video) => {
     SceneManager._scene._spriteset.addVideo(video)
+	video.texture.baseTexture.source.volume = AudioManager.masterVolume
     video.texture.baseTexture.source.play()
 }
 
